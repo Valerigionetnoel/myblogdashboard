@@ -39,3 +39,5 @@ BlogPost.init(
         modelName: 'blogpost',
     }
 )
+
+module.exports = BlogPost
