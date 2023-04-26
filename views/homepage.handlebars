@@ -1,0 +1,24 @@
+{{#each blogPosts }}
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{description}}</p>
+    <a href="/blogpost/{{id}}" class="card-link">{{name}}</a>
+    <h5>{{user.name}}</h5>
+  </div>
+</div>
+{{body}}
+{{/each}}
+
+{{!-- {{#each blogPosts}}
+
+<h1>
+    <a href="/blogpost/{{id}}">{{name}}</a>
+</h1>
+<div>
+    {{body}}
+</div>
+
+{{/each}} --}}
+
+{{!-- <h1>This is my homepage</h1> --}}

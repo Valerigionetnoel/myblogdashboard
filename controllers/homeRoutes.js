@@ -5,32 +5,27 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
     try {
         const blogPostData = await BlogPost.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name']
-                },
-            ],
+            include: [User],
         });
 
         const blogPosts = blogPostData.map((blogpost) => blogpost.get({ plain: true }));
 
         res.render('homepage', {
-            blogPosts,
-            logged_in: req.session.logged_in
+            blogPosts
+            // logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err)
     }
 });
 
-router.get('/blogpost/:id', async (req, res) => {
+router.get('/blogpost/:id', withAuth, async (req, res) => {
     try {
         const blogPostData = await BlogPost.findByPk(req.params.id, {
             include: [
                 {
                     model: User,
-                    attributes: ['name'],
+                    // attributes: ['name'],
                 },
             ],
         });
