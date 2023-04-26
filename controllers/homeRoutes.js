@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['name']
+                    attributes: ['name'],
                 },
             ],
         });
@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/blogpost/:id', async (req, res) => {
+router.get('/blogpost/:id', withAuth, async (req, res) => {
     try {
         const blogPostData = await BlogPost.findByPk(req.params.id, {
             include: [
