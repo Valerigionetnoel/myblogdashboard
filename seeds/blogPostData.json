@@ -1,0 +1,18 @@
+[
+    {
+        "name":"Today was a good day",
+        "description": "I was walking in the rain today and someone smile at me!"
+    },
+    {
+        "name":"Want to learn to code?",
+        "description": "Go and read about it! Watch video, and ask ChatGPT!"
+    },
+    {
+        "name":"What I had for lunch",
+        "description": "I ate poutine today for lunch, it was good."
+    },
+    {
+        "name":"I like to sing in the shower",
+        "description": "That is it."
+    }
+]
