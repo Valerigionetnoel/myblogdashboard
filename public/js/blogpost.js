@@ -1,11 +1,11 @@
 const NewFormHandler = async (event) => {
     event.preventDefault();
 
-    const title = document.querySelector('#comment-title').value.trim();
-    const description = document.querySelector('#comment-desc').value.trim();
+    const title = document.querySelector('#blog-title').value.trim();
+    const description = document.querySelector('#blog-desc').value.trim();
 
     if (title && description) {
-        const response = await fetch(`/api/comment`, {
+        const response = await fetch (`/api/blogpost`, {
             method: 'POST',
             body: JSON.stringify({ title, description}),
             headers: {
@@ -14,13 +14,13 @@ const NewFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/blogpost/:id');
+            document.location.replace('/profile');
         } else {
-            alert('Failed to create comment')
+            alert('Failed to create a blogpost')
         }
     }
 };
 
 document
-    .querySelector('.new-comment-form')
+    .querySelector('.new-blog-form')
     .addEventListener('submit', NewFormHandler)
