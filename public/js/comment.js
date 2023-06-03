@@ -23,4 +23,4 @@ const NewFormHandler = async (event) => {
 
 document
     .querySelector('.new-comment-form')
-    .addEventListener('submit', NewFormHandler)
+    .addEventListener('submitcomment', NewFormHandler)
