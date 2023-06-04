@@ -14,7 +14,7 @@ const NewFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/blogpost/:id');
+            document.location.reload();
         } else {
             alert('Failed to create comment')
         }
