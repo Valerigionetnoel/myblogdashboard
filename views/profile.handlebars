@@ -3,8 +3,29 @@
 </div>
 <div>
     {{#each blogposts}}
-    <h2>{{name}}</h2>
+    <h2><a href="/blogpost/{{id}}" class="card-link">{{name}}</a></h2>
+    <p>{{description}}</p>
     {{/each}}
+
+    {{#each comments}}
+        <p>{{id}}</p>
+    {{/each}}
+
+    <div class="new-blog-form">
+        <div class="form-group">
+            <label for="blog-title">Blog title</label>
+            <input type="text" id="blog-title" name="blog-title" />
+        </div>
+        <div class="form-group">
+            <label for="blog-desc">Enter description</label>
+            <input type="text" id="blog-desc" name="blog-desc" />
+        </div>
+        <div class="form-group">
+        <button type="submit" id="submitblog" class="btn btn-primary">Add a blogpost</button>
+      </div>
+    </div>
 
     {{body}}
 </div>
+
+<script src="/js/blogpost.js"></script>

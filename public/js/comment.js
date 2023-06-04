@@ -14,7 +14,7 @@ const NewFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            doocument.location.replace('/profile');
+            document.location.replace('/blogpost/:id');
         } else {
             alert('Failed to create comment')
         }
@@ -23,4 +23,4 @@ const NewFormHandler = async (event) => {
 
 document
     .querySelector('.new-comment-form')
-    .addEventListener('submit', NewFormHandler)
+    .addEventListener('submitcomment', NewFormHandler)
