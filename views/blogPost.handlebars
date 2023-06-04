@@ -3,6 +3,12 @@
 </h1>
 <p>{{description}}</p>
 <div>
+    {{#each comment}}
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+    {{/each}}
+</div>
+<div>
     <div class="new-comment-form">
         <div class="form-group">
             <label for="comment-title">Comment title</label>
