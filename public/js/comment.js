@@ -16,6 +16,7 @@ const NewFormHandler = async (event) => {
 
         if (response.ok) {
             alert('It worked!')
+
             document.location.reload();
         } else {
             alert('Failed to create comment')
